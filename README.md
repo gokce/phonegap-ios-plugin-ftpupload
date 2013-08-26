@@ -1,6 +1,15 @@
 # Ftp Upload for PhoneGap #
 
+Ftp Upload plugin that works out of the box with Cordova/PhoneGap 3.x.x `plugin add` interface.
+
 Only for file upload. Other functions are not covered yet. Basic FTP functions are from Apple's sample [SimpleFTPSample](https://developer.apple.com/library/IOs/samplecode/SimpleFTPSample/Listings/Read_Me_About_SimpleFTPSample_txt.html#//apple_ref/doc/uid/DTS40009243-Read_Me_About_SimpleFTPSample_txt-DontLinkElementID_16)
+
+## Installation ##
+
+  You can use Cordova/PhoneGap 3.x.x `plugin add` interface to install:
+  <pre>
+  phonegap local plugin add https://github.com/gokce/phonegap-ios-plugin-ftpupload.git
+  </pre>
 
 ## Usage in javascript ##
 
