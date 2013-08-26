@@ -102,7 +102,6 @@ NSString*           callbackId;
         
         self.networkStream.delegate = self;
         [self.networkStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        NSLog(@"%@", self.networkStream);
         [self.networkStream open];
         
         [self sendDidStart];
@@ -207,12 +206,11 @@ NSString*           callbackId;
 #pragma mark Network manager utility functions
 
 -(void)sendDidStart {
-    NSLog(@"send did start");
+  
 }
 
 - (void)sendDidStopWithStatus:(NSString *)statusString
 {
-    NSLog(@"send did stop");
     if (statusString == nil) {
         statusString = @"Succeeded";
         [self returnSuccess];
