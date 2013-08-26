@@ -9,10 +9,6 @@
     <license>MIT</license>
     <keywords>cordova,phonegap,ftpupload</keywords>
 
-    <js-module src="ftpupload.js" name="Camera">
-        <clobbers target="FtpUpload" />
-    </js-module>
-
      <!-- ios -->
      <platform name="ios">
          <config-file target="config.xml" parent="/*">
