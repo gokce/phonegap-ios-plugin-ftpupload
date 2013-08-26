@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.github.gokce.phonegap-ios-plugin-ftpupload"
+    version="0.0.1">
+    <name>FtpUpload</name>
+    <description>Phonegap FtpUpload Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,phonegap,ftpupload</keywords>
+
+    <js-module src="ftpupload.js" name="Camera">
+        <clobbers target="FtpUpload" />
+    </js-module>
+
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="config.xml" parent="/*">
+             <feature name="FtpUpload">
+                 <param name="ios-package" value="FtpUpload" />
+             </feature>
+         </config-file>
+
+         <js-module src="ftpupload.js" name="FtpUpload">
+            <clobbers target="FtpUpload" />
+         </js-module>
+
+         <header-file src="FtpUpload.h" />
+         <source-file src="FtpUpload.m" />
+   	     <framework src="CFNetwork.framework" />
+     </platform>
+</plugin>
