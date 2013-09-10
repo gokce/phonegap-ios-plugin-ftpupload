@@ -14,8 +14,12 @@ Only for file upload. Other functions are not covered yet. Basic FTP functions a
 ## Usage in javascript ##
 
   <pre>
-  window.plugins.ftpUpload.sendFiles(successCallback, failCallback, "address", "username", "password", "file");
+  window.plugins.ftpUpload.sendFile(successCallback, failCallback, "address", "username", "password", "filepath");
   </pre>
+  
+  * address can be either full: "ftp://127.0.0.1" or just ip or domain "127.0.0.1"
+  
+  * filepath should be fullpath. You can check [File Plugin](http://docs.phonegap.com/en/3.0.0/cordova_file_file.md.html#File) for more details on how to get fullpath.
 
 ### FailCallback returns fail message, that you can capture: ###
   <pre>

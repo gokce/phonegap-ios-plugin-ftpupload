@@ -13,7 +13,7 @@ function FtpUpload() {
     this.resultCallback = null; // Function
 }
 
-FtpUpload.prototype.sendFiles = function(successCallback, failCallback, address, username, password, file) {
+FtpUpload.prototype.sendFile = function(successCallback, failCallback, address, username, password, file) {
     
     var args = {};
     if(address)
@@ -25,7 +25,7 @@ FtpUpload.prototype.sendFiles = function(successCallback, failCallback, address,
     if(file)
         args.file = file;
 
-    return cordovaRef.exec(successCallback, failCallback, "FtpUpload", "sendFiles", [args]);
+    return cordovaRef.exec(successCallback, failCallback, "FtpUpload", "sendFile", [args]);
 }
 
 

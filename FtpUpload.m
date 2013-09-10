@@ -20,18 +20,20 @@ NSString*           callbackId;
     uint8_t                     _buffer[kSendBufferSize];
 }
 
-- (void)sendFiles:(CDVInvokedUrlCommand*)command {
+- (void)sendFile:(CDVInvokedUrlCommand*)command {
     //[self.commandDelegate runInBackground:^{
     
     NSDictionary *args = command.arguments[0];
     NSString *address = [args objectForKey:@"address"];
     NSString *username = [args objectForKey:@"username"];
     NSString *password = [args objectForKey:@"password"];
-    NSString *file = [args objectForKey:@"file"];
+    NSString *filePath = [args objectForKey:@"file"];
     
+    /* Commented out to disable bundle files (quite useless, if needed there can be separate function for this later)
     NSString *fileName = [file stringByDeletingPathExtension];
     NSString *fileType = [file pathExtension];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
+    */
     
     callbackId = command.callbackId;
     
