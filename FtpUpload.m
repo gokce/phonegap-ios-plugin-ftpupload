@@ -52,8 +52,6 @@ NSString*           callbackId;
     
     assert(filePath != nil);
     assert([[NSFileManager defaultManager] fileExistsAtPath:filePath]);
-    assert( [filePath.pathExtension isEqual:@"png"] || [filePath.pathExtension isEqual:@"jpg"] || [filePath.pathExtension isEqual:@"txt"] );
-    
     assert(self.networkStream == nil);      // don't tap send twice in a row!
     assert(self.fileStream == nil);         // ditto
     
